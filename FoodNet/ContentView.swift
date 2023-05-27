@@ -8,14 +8,19 @@
 import SwiftUI
 
 struct ContentView: View {
+    @ObservedObject var imageViewModel = ImageAPIViewModel()
     var body: some View {
         VStack {
             Image(systemName: "globe")
                 .imageScale(.large)
                 .foregroundColor(.accentColor)
-            Text("Hello, world!")
+      
         }
         .padding()
+        .task {
+            await imageViewModel.fetchData()
+            let _ = print(imageViewModel.images)
+        }
     }
 }
 

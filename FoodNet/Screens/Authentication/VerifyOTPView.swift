@@ -36,6 +36,9 @@ struct VerifyOTPView: View {
                     Text("Please enter the OTP, you have recieved it on +91-9623708249 ")
                         .padding(.top,20)
                         .frame(width: UIScreen.main.bounds.width * 0.9, alignment: .leading)
+//                    Text("Please enter the OTP, client with share with you")
+//                        .padding(.top,20)
+//                        .frame(width: UIScreen.main.bounds.width * 0.9, alignment: .leading)
                     ZStack {
                         HStack {
                             Spacer()

@@ -64,8 +64,28 @@ struct CreateAccountView: View {
                             RoundedRectangle(cornerRadius: 10)
                                 .stroke(Color.black, lineWidth: 1)
                         )
+                    VStack{
+                        Text("NGO Unique ID")
+                            .padding(.top,20)
+                            .frame(width: UIScreen.main.bounds.width * 0.9, alignment: .leading)
+                        TextField("", text: $name)
+                            .padding()
+                            .frame(height: 45)
+                            .frame(width: UIScreen.main.bounds.width * 0.9, alignment: .leading)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 10)
+                                    .stroke(Color.black, lineWidth: 1)
+                            )
+                        HStack{
+                            Spacer()
+                            Text("Verify Now")
+                                .padding(.horizontal)
+                                .foregroundColor(.green)
+                                .underline()
+                        }
+                    }
+                    
                     Text("Address")
-                        .padding(.top,20)
                         .frame(width: UIScreen.main.bounds.width * 0.9, alignment: .leading)
                     TextField("", text: $name)
                         .padding()

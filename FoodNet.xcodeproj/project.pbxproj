@@ -26,6 +26,9 @@
 		6F6367022A2290330005874D /* TicketDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F6367012A2290330005874D /* TicketDetailView.swift */; };
 		6F6367062A2298490005874D /* TicketTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F6367052A2298490005874D /* TicketTabView.swift */; };
 		6F6367082A2299DA0005874D /* PastOrdersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F6367072A2299DA0005874D /* PastOrdersView.swift */; };
+		6F63670B2A22AEB80005874D /* HomeScreenTakerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F63670A2A22AEB80005874D /* HomeScreenTakerView.swift */; };
+		6F63670E2A22B6F70005874D /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F63670D2A22B6F70005874D /* ViewModel.swift */; };
+		6F6367102A22C4920005874D /* TakerTicket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F63670F2A22C4920005874D /* TakerTicket.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +52,9 @@
 		6F6367012A2290330005874D /* TicketDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketDetailView.swift; sourceTree = "<group>"; };
 		6F6367052A2298490005874D /* TicketTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketTabView.swift; sourceTree = "<group>"; };
 		6F6367072A2299DA0005874D /* PastOrdersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastOrdersView.swift; sourceTree = "<group>"; };
+		6F63670A2A22AEB80005874D /* HomeScreenTakerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenTakerView.swift; sourceTree = "<group>"; };
+		6F63670D2A22B6F70005874D /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		6F63670F2A22C4920005874D /* TakerTicket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakerTicket.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +108,8 @@
 		6F6366E62A2222F70005874D /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				6F63670C2A22B6BD0005874D /* ViewModel */,
+				6F6367092A22AE9A0005874D /* Taker */,
 				6F6366F22A223F3D0005874D /* Patron */,
 				6F6366E72A2223130005874D /* Authentication */,
 			);
@@ -134,6 +142,23 @@
 				6F6367072A2299DA0005874D /* PastOrdersView.swift */,
 			);
 			path = Patron;
+			sourceTree = "<group>";
+		};
+		6F6367092A22AE9A0005874D /* Taker */ = {
+			isa = PBXGroup;
+			children = (
+				6F63670A2A22AEB80005874D /* HomeScreenTakerView.swift */,
+				6F63670F2A22C4920005874D /* TakerTicket.swift */,
+			);
+			path = Taker;
+			sourceTree = "<group>";
+		};
+		6F63670C2A22B6BD0005874D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				6F63670D2A22B6F70005874D /* ViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -217,10 +242,13 @@
 				6F6366F62A2256DE0005874D /* HomeScreen.swift in Sources */,
 				6F6367022A2290330005874D /* TicketDetailView.swift in Sources */,
 				6F6366F12A223E6B0005874D /* OnboardingView2.swift in Sources */,
+				6F63670E2A22B6F70005874D /* ViewModel.swift in Sources */,
 				6F6367002A228A8B0005874D /* EarthView.swift in Sources */,
 				6F6366F82A2256F50005874D /* ProgressView.swift in Sources */,
 				6F6366F42A223F570005874D /* PatronHomeScreen.swift in Sources */,
+				6F6367102A22C4920005874D /* TakerTicket.swift in Sources */,
 				6F6366D92A2222BB0005874D /* FoodNetApp.swift in Sources */,
+				6F63670B2A22AEB80005874D /* HomeScreenTakerView.swift in Sources */,
 				6F6366FE2A22727D0005874D /* SuccessPageView.swift in Sources */,
 				6F6367082A2299DA0005874D /* PastOrdersView.swift in Sources */,
 			);
