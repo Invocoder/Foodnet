@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6F5F526E2A22CDC7006D2631 /* TakerHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F5F526D2A22CDC7006D2631 /* TakerHistoryView.swift */; };
 		6F6366D92A2222BB0005874D /* FoodNetApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F6366D82A2222BB0005874D /* FoodNetApp.swift */; };
 		6F6366DB2A2222BB0005874D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F6366DA2A2222BB0005874D /* ContentView.swift */; };
 		6F6366DD2A2222BC0005874D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F6366DC2A2222BC0005874D /* Assets.xcassets */; };
@@ -29,9 +30,11 @@
 		6F63670B2A22AEB80005874D /* HomeScreenTakerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F63670A2A22AEB80005874D /* HomeScreenTakerView.swift */; };
 		6F63670E2A22B6F70005874D /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F63670D2A22B6F70005874D /* ViewModel.swift */; };
 		6F6367102A22C4920005874D /* TakerTicket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F63670F2A22C4920005874D /* TakerTicket.swift */; };
+		6F6367122A22CB830005874D /* TakerMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F6367112A22CB830005874D /* TakerMapView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6F5F526D2A22CDC7006D2631 /* TakerHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakerHistoryView.swift; sourceTree = "<group>"; };
 		6F6366D52A2222BB0005874D /* FoodNet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodNet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F6366D82A2222BB0005874D /* FoodNetApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodNetApp.swift; sourceTree = "<group>"; };
 		6F6366DA2A2222BB0005874D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -55,6 +58,7 @@
 		6F63670A2A22AEB80005874D /* HomeScreenTakerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenTakerView.swift; sourceTree = "<group>"; };
 		6F63670D2A22B6F70005874D /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		6F63670F2A22C4920005874D /* TakerTicket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakerTicket.swift; sourceTree = "<group>"; };
+		6F6367112A22CB830005874D /* TakerMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakerMapView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +153,8 @@
 			children = (
 				6F63670A2A22AEB80005874D /* HomeScreenTakerView.swift */,
 				6F63670F2A22C4920005874D /* TakerTicket.swift */,
+				6F6367112A22CB830005874D /* TakerMapView.swift */,
+				6F5F526D2A22CDC7006D2631 /* TakerHistoryView.swift */,
 			);
 			path = Taker;
 			sourceTree = "<group>";
@@ -246,11 +252,13 @@
 				6F6367002A228A8B0005874D /* EarthView.swift in Sources */,
 				6F6366F82A2256F50005874D /* ProgressView.swift in Sources */,
 				6F6366F42A223F570005874D /* PatronHomeScreen.swift in Sources */,
+				6F6367122A22CB830005874D /* TakerMapView.swift in Sources */,
 				6F6367102A22C4920005874D /* TakerTicket.swift in Sources */,
 				6F6366D92A2222BB0005874D /* FoodNetApp.swift in Sources */,
 				6F63670B2A22AEB80005874D /* HomeScreenTakerView.swift in Sources */,
 				6F6366FE2A22727D0005874D /* SuccessPageView.swift in Sources */,
 				6F6367082A2299DA0005874D /* PastOrdersView.swift in Sources */,
+				6F5F526E2A22CDC7006D2631 /* TakerHistoryView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
