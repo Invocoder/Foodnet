@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-import SwiftUI
 
 struct StretchyRectangleView: View {
     private let kHeaderHeight: CGFloat = 300
@@ -266,3 +265,7 @@ extension ToggleStyle where Self == CheckboxToggleStyle {
  
     static var checkmark: CheckboxToggleStyle { CheckboxToggleStyle() }
 }
+
+
+
+

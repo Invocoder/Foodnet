@@ -11,6 +11,26 @@ struct SuccessPageView: View {
     var body: some View {
         ZStack{
             Image("bg")
+            VStack{
+                VStack{
+                    Image("congrats")
+                        .resizable()
+                        .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height * 0.3)
+                        .padding(.top, 50)
+                    Text("Congratulations!")
+                        .padding()
+                        .font(.title)
+                        .bold()
+                    Text("You just reduced ")
+                        .foregroundColor(.gray)
+                      
+                    Text("0.25 Tonnes of CO2")
+                        .foregroundColor(.gray)
+                        .bold()
+                    Spacer()
+                }
+            
+            }
         }
     }
 }
