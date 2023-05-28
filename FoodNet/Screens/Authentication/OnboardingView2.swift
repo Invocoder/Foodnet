@@ -18,7 +18,7 @@ struct OnboardingView2: View {
                     Image("ob2")
                         .resizable()
                         .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height * 0.5)
-                        .padding(.top, 50)
+                        .padding(.top, 75)
                     Spacer()
                 }
                 VStack{
@@ -26,16 +26,16 @@ struct OnboardingView2: View {
                         .font(.title2)
                         .bold()
                         .multilineTextAlignment(.center)
-                    Text("You can be the Patron or the Steward, it’s you who make our Earth better.")
+                    Text("You can be a Patron, it’s you who make our Earth better.")
                     
                         .padding()
                         .multilineTextAlignment(.center)
                     Button(action: {giver = 1}, label: {
-                        ButtonView(buttonName: "I want to donate", buttonColor: .green, textColor: .white, height: 50, horizontalPadding: 20)
+                        ButtonView(buttonName: "I want to donate", buttonColor: .primary, textColor: .white, height: 50, horizontalPadding: 20)
                     })
                     .padding(.vertical, 5)
                     Button(action: {giver = 2}, label: {
-                        ButtonView(buttonName: "I want to take", buttonColor: .white, textColor: .green, height: 50, horizontalPadding: 20)
+                        ButtonView(buttonName: "I want to take", buttonColor: .white, textColor: .primary, height: 50, horizontalPadding: 20)
                     })
                     .padding(.vertical, 5)
                         

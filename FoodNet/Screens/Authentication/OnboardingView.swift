@@ -26,17 +26,17 @@ struct OnboardingView: View {
                         .font(.title2)
                         .bold()
                         .multilineTextAlignment(.center)
-                    Text("Network with like-minded people where every thing is a opportunity to help earth.")
+                    Text("Network with like-minded people where every thing is an opportunity to help earth.")
                     
                         .padding()
                         .multilineTextAlignment(.center)
                     Button(action: {giver = 1}, label: {
-                        ButtonView(buttonName: "I want to donate", buttonColor: .green, textColor: .white, height: 50, horizontalPadding: 20)
+                        ButtonView(buttonName: "I want to donate", buttonColor: .primary, textColor: .white, height: 50, horizontalPadding: 20)
                     })
                     
                     .padding(.vertical, 5)
                     Button(action: {giver = 2}, label: {
-                        ButtonView(buttonName: "I want to take", buttonColor: .white, textColor: .green, height: 50, horizontalPadding: 20)
+                        ButtonView(buttonName: "I want to support", buttonColor: .white, textColor: .primary, height: 50, horizontalPadding: 20)
                     })
                     .padding(.vertical, 5)
                         

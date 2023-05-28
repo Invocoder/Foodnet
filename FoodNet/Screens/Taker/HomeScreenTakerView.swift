@@ -18,7 +18,7 @@ struct HomeScreenTakerView: View {
                 HStack{
                     RoundedRectangle(cornerRadius: 15)
                         .frame(width: 180, height: 180)
-                        .foregroundColor(.green)
+                        .foregroundColor(.lightGreen)
                         .overlay(content: {
                             VStack(content: {
                                 Image("carbon")
@@ -35,16 +35,18 @@ struct HomeScreenTakerView: View {
                         })
                     RoundedRectangle(cornerRadius: 15)
                         .frame(width: 180, height: 180)
-                        .foregroundColor(.green)
+                        .foregroundColor(.lightGreen)
                         .overlay(content: {
                             VStack(content: {
                                 HStack{
                                     VStack{
-                                        Image("location")
+                                        Image("k")
                                             .resizable()
-                                            .frame(width: 30, height: 50)
+                                            .frame(width: 40, height: 70)
                                             .padding(.trailing, 60)
-                                            .padding(.bottom)
+                                            .padding(.bottom, 10)
+                                            .padding(.top, 20)
+                                        
                                         Text("150")
                                             .padding(.trailing, 50)
                                             .padding(.horizontal)
@@ -53,6 +55,8 @@ struct HomeScreenTakerView: View {
                                             .padding(.bottom)
                                             .foregroundColor(.gray)
                                             .padding(.horizontal)
+                                     
+                                        
                                     }
                                     Spacer()
                                 }
@@ -64,11 +68,12 @@ struct HomeScreenTakerView: View {
                 }
                 HStack{
                     Text("Available Orders")
+                        .bold()
                     
                     Spacer()
                     NavigationLink(destination: TakerHistoryView(), label: {
                         Text("View All")
-                            .foregroundColor(.green)
+                            .foregroundColor(.primary)
                             .underline()
                     })
                    
@@ -115,10 +120,11 @@ struct HomeScreenTakerView: View {
            
                 HStack{
                     Text("Active Orders")
+                        .bold()
                     
                     Spacer()
 //                    Text("View All")
-//                        .foregroundColor(.green)
+//                        .foregroundColor(.primary)
 //                        .underline()
                 }
                 .padding(.vertical)

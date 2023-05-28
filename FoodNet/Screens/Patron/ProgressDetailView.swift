@@ -67,7 +67,7 @@ struct ProgressDetailView: View {
                                 .resizable()
                                 .frame(width: 15, height: 20)
                             Text("Track")
-                                .foregroundColor(.green)
+                                .foregroundColor(.primary)
                                 .padding(.trailing)
                         }
 

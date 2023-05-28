@@ -13,12 +13,13 @@ struct TicketDetailView: View {
             VStack(spacing: 0){
                 RoundedRectangle(cornerRadius: 24)
                     .stroke(Color.gray, lineWidth: 1)
-                    .frame(width: UIScreen.main.bounds.width - 60, height: 280)
+                    .frame(width: UIScreen.main.bounds.width - 50, height: 280)
                     .overlay(
                         VStack{
                             Rectangle()
+                                .foregroundColor(.black.opacity(0.87))
                                 .cornerRadius(24, corners: [.topLeft, .topRight])
-                                .frame(width: UIScreen.main.bounds.width - 60, height: 100)
+                                .frame(width: UIScreen.main.bounds.width - 50, height: 100)
                             Spacer()
                         }
                         )
@@ -44,7 +45,7 @@ struct TicketDetailView: View {
                             .padding(.top,1)
                     }
                 }
-                .padding(.horizontal,40)
+                .padding(.horizontal,50)
                 .foregroundColor(.white)
                 .padding(.bottom, 30)
                 HStack{
@@ -68,7 +69,7 @@ struct TicketDetailView: View {
                             .padding(.top,1)
                     }
                 }
-                .padding(.horizontal,40)
+                .padding(.horizontal,50)
                 .padding(.bottom, 10)
                 HStack{
 
@@ -96,7 +97,7 @@ struct TicketDetailView: View {
                             .padding(.top,1)
                     }
                 }
-                .padding(.horizontal,40)
+                .padding(.horizontal,50)
                 .padding(.top, 10)
             }
         }

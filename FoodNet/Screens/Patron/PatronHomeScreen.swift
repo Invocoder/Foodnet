@@ -25,7 +25,7 @@ struct PatronHomeScreen: View {
             }
         ScrollView{
             ZStack{
-                StretchyRectangleView(cornerRadius: 0, heightpct: 0.075, rectColor: .green)
+                StretchyRectangleView(cornerRadius: 0, heightpct: 0.075, rectColor: .primary)
                 HStack{
                     Text("Create my Listing")
                         .font(.system(size : 20))
@@ -39,6 +39,7 @@ struct PatronHomeScreen: View {
                 VStack{
                     Text("Food Title")
                         .padding(.top,20)
+                        .foregroundColor(.gray)
                         .frame(width: UIScreen.main.bounds.width * 0.9, alignment: .leading)
                     TextField("", text: $name)
                         .padding()
@@ -50,6 +51,7 @@ struct PatronHomeScreen: View {
                         )
                     Text("Description")
                         .padding(.top,10)
+                        .foregroundColor(.gray)
                         .frame(width: UIScreen.main.bounds.width * 0.9, alignment: .leading)
                     TextField("", text: $name)
                         .padding()
@@ -61,6 +63,7 @@ struct PatronHomeScreen: View {
                         )
                     Text("Type of Food")
                         .padding(.top,10)
+                        .foregroundColor(.gray)
                         .frame(width: UIScreen.main.bounds.width * 0.9, alignment: .leading)
                     ChipContainerView(viewModel: viewModel)
                         .padding(.horizontal)
@@ -68,6 +71,7 @@ struct PatronHomeScreen: View {
                     
                     Text("Quantity")
                         .padding(.top,10)
+                        .foregroundColor(.gray)
                         .frame(width: UIScreen.main.bounds.width * 0.9, alignment: .leading)
                     TextField("", text: $name)
                         .padding()
@@ -90,6 +94,7 @@ struct PatronHomeScreen: View {
                         )
                     Group{
                         Text("Collect Before")
+                            .foregroundColor(.gray)
                             .padding(.top,10)
                             .frame(width: UIScreen.main.bounds.width * 0.9, alignment: .leading)
                         TextField("", text: $name)
@@ -112,7 +117,7 @@ struct PatronHomeScreen: View {
                         }
                     }
                 }
-                NavigationLink(destination: ProgressView(isShowingDetail : $isShowingDetail) , label:  {ButtonView(buttonName: "Submit", buttonColor: .green, textColor: .white, height: 50, horizontalPadding: 20)})
+                NavigationLink(destination: ProgressView(isShowingDetail : $isShowingDetail) , label:  {ButtonView(buttonName: "Submit", buttonColor: .primary, textColor: .white, height: 50, horizontalPadding: 20)})
                 .padding(.top, 10)
                
             }

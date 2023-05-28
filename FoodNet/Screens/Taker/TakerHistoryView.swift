@@ -12,9 +12,9 @@ struct TakerHistoryView: View {
         
             ScrollView{
                 ZStack{
-                    StretchyRectangleView(cornerRadius: 0, heightpct: 0.075, rectColor: .green)
+                    StretchyRectangleView(cornerRadius: 0, heightpct: 0.075, rectColor: .primary)
                     HStack{
-                        Text("Past Orders")
+                        Text("Available Orders")
                             .font(.system(size : 20))
                             .bold()
                             .foregroundColor(.white)

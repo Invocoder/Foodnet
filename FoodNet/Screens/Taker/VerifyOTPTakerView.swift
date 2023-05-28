@@ -25,7 +25,7 @@ struct VerifyOTPTakerView: View {
         ZStack{
         ScrollView{
             ZStack{
-                StretchyRectangleView(cornerRadius: 0, heightpct: 0.075, rectColor: .green)
+                StretchyRectangleView(cornerRadius: 0, heightpct: 0.075, rectColor: .primary)
                 HStack{
                     Text("Verify OTP")
                         .font(.system(size : 20))
@@ -82,7 +82,7 @@ struct VerifyOTPTakerView: View {
                    
                 }
                Button(action: {showSheet = true}, label: {
-                   ButtonView(buttonName: "Verify", buttonColor: .green, textColor: .white, height: 50, horizontalPadding: 20)
+                   ButtonView(buttonName: "Verify", buttonColor: .primary, textColor: .white, height: 50, horizontalPadding: 20)
                })
          
                     .padding(.top, 30)

@@ -58,13 +58,13 @@ struct TakerMapView: View {
                                     Text("Collect Before")
                                         .frame(width: 200, alignment: .leading)
                                     Capsule()
-                                        .foregroundColor(.green)
+                                        .foregroundColor(.primary)
                                         .frame(width: 110, height: 35)
                                         .overlay{
                                             HStack
                                             {
                                                 Image(systemName: "alarm")
-                                                Text("In 8 pm")
+                                                Text("8 pm")
                                                 
                                             }
                                             .foregroundColor(.white)
@@ -74,7 +74,7 @@ struct TakerMapView: View {
                                         .padding(.top,1)
                                 }
         //                    Capsule()
-        //                        .foregroundColor(.green)
+        //                        .foregroundColor(.primary)
         //                        .frame(width: 100, height: 30)
         //                        .overlay(Text("Collected").foregroundColor(.white))
         //                        .padding(.top, 30)
@@ -92,7 +92,7 @@ struct TakerMapView: View {
                         .padding(.horizontal,40)
                         .padding(.top, 10)
                         NavigationLink(destination: VerifyOTPTakerView(isShowingDetail : $isShowingDetail), label: {
-                            ButtonView(buttonName: "Reached Location", buttonColor: .green, textColor: .white, height: 42, horizontalPadding: 30)
+                            ButtonView(buttonName: "Reached Location", buttonColor: .primary, textColor: .white, height: 42, horizontalPadding: 30)
                                 .padding(.top)
                         })
                    

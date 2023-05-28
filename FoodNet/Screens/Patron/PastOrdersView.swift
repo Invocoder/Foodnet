@@ -11,7 +11,7 @@ struct PastOrdersView: View {
     var body: some View {
         ScrollView{
             ZStack{
-                StretchyRectangleView(cornerRadius: 0, heightpct: 0.125, rectColor: .green)
+                StretchyRectangleView(cornerRadius: 0, heightpct: 0.125, rectColor: .primary)
                 HStack{
                     Text("Past Orders")
                         .font(.system(size : 20))
@@ -19,6 +19,7 @@ struct PastOrdersView: View {
                         .foregroundColor(.white)
                         .padding()
                         .padding(.top, 40)
+                        .padding(.horizontal,20)
                     Spacer()
                 }
             }

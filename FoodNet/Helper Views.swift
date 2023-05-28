@@ -60,13 +60,14 @@ struct ButtonView: View {
     var imgwidth: CGFloat = 25
     var imgheight: CGFloat = 25
     var isSystemName = false
-    var borderColor: Color = .green
+    var borderColor: Color = .primary
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 12, style: .continuous)
                 .foregroundColor(buttonColor)
                 .frame(height: height)
                 .padding(.horizontal, horizontalPadding)
+                .shadow(radius: 2)
             HStack {
                 if imageName != "" {
                     if isSystemName {
@@ -90,7 +91,6 @@ struct ButtonView: View {
                 .stroke(borderColor, lineWidth: 0.5)
                 .padding(.horizontal, horizontalPadding)
         )
-        .shadow(radius: 4)
 
     }
     
@@ -184,12 +184,12 @@ struct ChipView : View {
         .padding(.vertical, 4)
         .padding(.leading, 4)
         .padding(.trailing, 10)
-        .foregroundColor(isSelected ? .white : .green)
-        .background(isSelected ? Color.green : Color.white)
+        .foregroundColor(isSelected ? .white : .primary)
+        .background(isSelected ? Color.primary : Color.white)
         .cornerRadius(20)
         .overlay(
             RoundedRectangle(cornerRadius: 20)
-                .stroke(Color.green, lineWidth: 1.5)
+                .stroke(Color.primary, lineWidth: 1.5)
             
         ).onTapGesture {
             isSelected.toggle()
@@ -287,7 +287,7 @@ struct BackButtonView: View {
         }
         .overlay(
             RoundedRectangle(cornerRadius: 12)
-                .stroke(Color.green, lineWidth: 0.5)               )
+                .stroke(Color.primary, lineWidth: 0.5)               )
     }
 }
 

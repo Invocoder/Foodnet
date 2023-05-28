@@ -46,7 +46,7 @@ struct ProgressView: View {
                         ZStack{
                         Rectangle()
                             .frame(height: UIScreen.main.bounds.height * 0.1)
-                            .foregroundColor(Color(.green))
+                            .foregroundColor(.primary)
                             HStack{
                                 Image("profile")
                                     .resizable()

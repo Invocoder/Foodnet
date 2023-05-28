@@ -31,7 +31,7 @@ struct EarthView: View {
                 .offset(y: -10)
                 HStack{
                     Text("Woodbridge Country Club")
-                        .foregroundColor(.green)
+                        .foregroundColor(.primary)
                         .padding(.trailing)
                     Spacer()
                 }
@@ -41,7 +41,7 @@ struct EarthView: View {
                 HStack{
                     RoundedRectangle(cornerRadius: 15)
                         .frame(width: 180, height: 180)
-                        .foregroundColor(.green)
+                        .foregroundColor(.lightGreen)
                         .overlay(content: {
                             VStack(content: {
                                 Image("carbon")
@@ -57,7 +57,7 @@ struct EarthView: View {
                         })
                     RoundedRectangle(cornerRadius: 15)
                         .frame(width: 180, height: 180)
-                        .foregroundColor(.green)
+                        .foregroundColor(.lightGreen)
                         .overlay(content: {
                             VStack(content: {
                                 Image("carbon")
@@ -80,7 +80,7 @@ struct EarthView: View {
                         PastOrdersView()
                     }, label: {
                         Text("View All")
-                            .foregroundColor(.green)
+                            .foregroundColor(.primary)
                             .underline()
                     })
               
@@ -90,7 +90,7 @@ struct EarthView: View {
                     .padding(.bottom, 20)
                     .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height * 0.365)
                 NavigationLink(destination: PatronHomeScreen(isShowingDetail : $isShowingDetail),isActive: $isShowingDetail,label : {
-                    ButtonView(buttonName: "Create Donation", buttonColor: .green, textColor: .white, height: 42, horizontalPadding: 14)
+                    ButtonView(buttonName: "Create Donation", buttonColor: .primary, textColor: .white, height: 45, horizontalPadding: 24)
                 })
             }
         }

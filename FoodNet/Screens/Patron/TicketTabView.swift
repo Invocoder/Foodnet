@@ -20,7 +20,7 @@ struct TicketTabView: View {
                 .foregroundColor(selectedTab != 1 ? .black : .gray)
 
             })
-                .padding(.leading, 6)
+                .padding(.leading, 2)
             TabView(selection: $selectedTab){
                 TicketDetailView()
                     .tag(1)
@@ -41,7 +41,7 @@ struct TicketTabView: View {
             }, label: {
                 Image(systemName: "chevron.right")
                 .foregroundColor(selectedTab != 5 ? .black : .gray)
-                .padding(.trailing, 6)
+                .padding(.trailing, 2)
             })
              
         }

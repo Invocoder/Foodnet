@@ -22,7 +22,7 @@ struct CreateAccountView: View {
             }
         ScrollView{
             ZStack{
-                StretchyRectangleView(cornerRadius: 0, heightpct: 0.075, rectColor: .green)
+                StretchyRectangleView(cornerRadius: 0, heightpct: 0.075, rectColor: .primary)
                 HStack{
                     Text("Create my account")
                         .font(.system(size : 20))
@@ -37,6 +37,7 @@ struct CreateAccountView: View {
                     Text("Name")
                         .padding(.top,20)
                         .frame(width: UIScreen.main.bounds.width * 0.9, alignment: .leading)
+                        .foregroundColor(.gray)
                     TextField("", text: $name)
                         .padding()
                         .frame(height: 45)
@@ -47,6 +48,7 @@ struct CreateAccountView: View {
                         )
                     Text("Contact Number")
                         .padding(.top,20)
+                        .foregroundColor(.gray)
                         .frame(width: UIScreen.main.bounds.width * 0.9, alignment: .leading)
                     TextField("", text: $name)
                         .padding()
@@ -58,6 +60,7 @@ struct CreateAccountView: View {
                         )
                     Text("Email")
                         .padding(.top,20)
+                        .foregroundColor(.gray)
                         .frame(width: UIScreen.main.bounds.width * 0.9, alignment: .leading)
                     TextField("", text: $name)
                         .padding()
@@ -71,6 +74,7 @@ struct CreateAccountView: View {
                         VStack{
                             Text("NGO Unique ID")
                                 .padding(.top,20)
+                                .foregroundColor(.gray)
                                 .frame(width: UIScreen.main.bounds.width * 0.9, alignment: .leading)
                             TextField("", text: $name)
                                 .padding()
@@ -84,13 +88,14 @@ struct CreateAccountView: View {
                                 Spacer()
                                 Text("Verify Now")
                                     .padding(.horizontal)
-                                    .foregroundColor(.green)
+                                    .foregroundColor(.primary)
                                     .underline()
                             }
                         }
                     }
                     
                     Text("Address")
+                        .foregroundColor(.gray)
                         .frame(width: UIScreen.main.bounds.width * 0.9, alignment: .leading)
                     TextField("", text: $name)
                         .padding()
@@ -102,7 +107,7 @@ struct CreateAccountView: View {
                         )
                 }
                Button(action: {selectedTab = 2}, label: {
-                   ButtonView(buttonName: "Join The Revolution!", buttonColor: .green, textColor: .white, height: 50, horizontalPadding: 20)
+                   ButtonView(buttonName: "Join The Revolution!", buttonColor: .primary, textColor: .white, height: 50, horizontalPadding: 20)
                        .padding(.top, 30)
                })
                
