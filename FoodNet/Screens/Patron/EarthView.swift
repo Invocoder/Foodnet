@@ -60,14 +60,21 @@ struct EarthView: View {
                         .foregroundColor(.lightGreen)
                         .overlay(content: {
                             VStack(content: {
-                                Image("carbon")
+                                Image("k")
                                     .resizable()
-                                    .frame(width: 150, height: 100)
-                                Text("0.25 Tonnes")
+                                    .frame(width: 40, height: 70)
+                                    .padding(.trailing, 60)
+                                    .padding(.bottom, 10)
+                                    .padding(.top, 20)
+                                
+                                Text("150")
                                     .padding(.trailing, 50)
-                                Text("new orders")
+                                    .padding(.horizontal)
+                                Text("times")
                                     .padding(.trailing, 50)
                                     .padding(.bottom)
+                                    .foregroundColor(.gray)
+                                    .padding(.horizontal)
                                 
                             })
                         })
