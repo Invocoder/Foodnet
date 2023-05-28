@@ -11,8 +11,15 @@ struct TicketTabView: View {
     @State var selectedTab = 1
     var body: some View {
         HStack{
+            Button(action: {
+                if selectedTab != 1 {
+                    selectedTab = selectedTab - 1
+                }
+            }, label: {
                 Image(systemName: "chevron.left")
                 .foregroundColor(selectedTab != 1 ? .black : .gray)
+
+            })
                 .padding(.leading, 6)
             TabView(selection: $selectedTab){
                 TicketDetailView()
@@ -27,9 +34,16 @@ struct TicketTabView: View {
                     .tag(5)
             }
             .tabViewStyle(.page)
+            Button(action: {
+                if selectedTab != 5 {
+                    selectedTab = selectedTab + 1
+                }
+            }, label: {
                 Image(systemName: "chevron.right")
                 .foregroundColor(selectedTab != 5 ? .black : .gray)
                 .padding(.trailing, 6)
+            })
+             
         }
   
     }

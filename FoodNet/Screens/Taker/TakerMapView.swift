@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct TakerMapView: View {
+    @Binding var isShowingDetail : Bool
     var body: some View {
         ZStack{
             Image("map")
@@ -90,8 +91,11 @@ struct TakerMapView: View {
                         }
                         .padding(.horizontal,40)
                         .padding(.top, 10)
-                        ButtonView(buttonName: "Reached Location", buttonColor: .green, textColor: .white, height: 42, horizontalPadding: 30)
-                            .padding(.top)
+                        NavigationLink(destination: VerifyOTPTakerView(isShowingDetail : $isShowingDetail), label: {
+                            ButtonView(buttonName: "Reached Location", buttonColor: .green, textColor: .white, height: 42, horizontalPadding: 30)
+                                .padding(.top)
+                        })
+                   
                          
                     }
                     .padding(.trailing, 30)
@@ -101,11 +105,12 @@ struct TakerMapView: View {
         
         }
         .ignoresSafeArea()
+        .navigationBarBackButtonHidden(true)
     }
 }
 
 struct TakerMapView_Previews: PreviewProvider {
     static var previews: some View {
-        TakerMapView()
+        TakerMapView(isShowingDetail: .constant(false))
     }
 }

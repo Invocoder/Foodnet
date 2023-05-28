@@ -30,6 +30,7 @@ struct TakerHistoryView: View {
                 }
                 .padding(.top, 10)
             }
+            .navigationBarBackButtonHidden(true)
     }
 }
 

@@ -13,9 +13,7 @@ struct TakerTicket: View {
             RoundedRectangle(cornerRadius: 10)
                 .shadow(radius: 10)
                 .foregroundColor(.white)
-               
-            
-                
+                .padding(.vertical)
             VStack{
                 Image("ticket")
                     .resizable()
@@ -32,14 +30,14 @@ struct TakerTicket: View {
                     .padding(.bottom)
                 HStack{
                     Spacer()
-                    ButtonView(buttonName: "Yes", buttonColor: .green, textColor: .white, height: 50, horizontalPadding: 0)
+                    ButtonView(buttonName: "Yes", buttonColor: .green, textColor: .white, height: 45, horizontalPadding: 0)
                         .padding(.leading, 50)
                         .padding(.trailing, 2)
-                    ButtonView(buttonName: "No", buttonColor: .clear, textColor: .black, height: 50, horizontalPadding: 00)
+                    ButtonView(buttonName: "No", buttonColor: .clear, textColor: .black, height: 45, horizontalPadding: 00)
                         .padding(.trailing, 50)
                     Spacer()
                 }
-                .padding(.bottom)
+                .padding(.bottom, 30)
             }
         
         }

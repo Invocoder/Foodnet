@@ -1,13 +1,14 @@
 //
-//  VerifyOTPView.swift
+//  VerifyOTPTakerView.swift
 //  FoodNet
 //
-//  Created by Yashwanthi Manchala on 27/05/2023.
+//  Created by Yashwanthi Manchala on 28/05/2023.
 //
+
 
 import SwiftUI
 
-struct VerifyOTPView: View {
+struct VerifyOTPTakerView: View {
     @State var name : String = ""
     @StateObject var otpviewModel = OTPDataViewModel(otpNumber: 6)
     let textBoxWidth = UIScreen.main.bounds.width / 8
@@ -17,8 +18,9 @@ struct VerifyOTPView: View {
     var textFieldOriginalWidth: CGFloat {
         (textBoxWidth*6)+(spaceBetweenBoxes*3)+((paddingOfBox*2)*3)
     }
-    @Binding var giver: Int
-    @Binding var login: Bool
+    @State var showSheet : Bool = false
+    @Binding var isShowingDetail : Bool
+
     var body: some View {
         ZStack{
         ScrollView{
@@ -35,7 +37,8 @@ struct VerifyOTPView: View {
             }
             VStack{
                 VStack{
-                        Text("Please enter the OTP, you have recieved it on +91-9623708249 ")
+
+                        Text("Please enter the OTP, client with share with you")
                             .padding(.top,20)
                             .frame(width: UIScreen.main.bounds.width * 0.9, alignment: .leading)
                     
@@ -78,7 +81,7 @@ struct VerifyOTPView: View {
                     .padding()
                    
                 }
-               Button(action: {login = false}, label: {
+               Button(action: {showSheet = true}, label: {
                    ButtonView(buttonName: "Verify", buttonColor: .green, textColor: .white, height: 50, horizontalPadding: 20)
                })
          
@@ -94,7 +97,17 @@ struct VerifyOTPView: View {
                     .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height * 0.3)
             }
     }
+        .sheet(isPresented: $showSheet, content: {
+            SuccessPageView()
+        })
+        .onChange(of: showSheet, perform: { _ in
+            if showSheet == false {
+               isShowingDetail = false
+            }
+        })
         .edgesIgnoringSafeArea(.bottom)
+        .navigationBarBackButtonHidden(true)
+
     }
     private func otpText(text: String) -> some View {
         return Text(text)
@@ -115,8 +128,8 @@ struct VerifyOTPView: View {
 
 }
 
-struct VerifyOTPView_Previews: PreviewProvider {
+struct VerifyOTPTakerView_Previews: PreviewProvider {
     static var previews: some View {
-        VerifyOTPView(giver:  .constant(1), login: .constant(false))
+        VerifyOTPTakerView(isShowingDetail: .constant(false))
     }
 }

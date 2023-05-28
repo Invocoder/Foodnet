@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct HomeScreenTakerView: View {
+    @State var selectedTab = 1
+    @State var isShowingDetail = false
     var body: some View {
       
         ZStack{
@@ -64,22 +66,53 @@ struct HomeScreenTakerView: View {
                     Text("Available Orders")
                     
                     Spacer()
-                    Text("View All")
-                        .foregroundColor(.green)
-                        .underline()
+                    NavigationLink(destination: TakerHistoryView(), label: {
+                        Text("View All")
+                            .foregroundColor(.green)
+                            .underline()
+                    })
+                   
                 }
                 .padding(.vertical)
                 .padding(.horizontal)
-                TabView{
+                HStack{
+                    Button(action: {
+                        if selectedTab != 1 {
+                            selectedTab = selectedTab - 1
+                        }
+                    }, label: {
+                        Image(systemName: "chevron.left")
+                        .foregroundColor(selectedTab != 1 ? .black : .gray)
+                    })
+                  
+                        .padding(.leading, 6)
+                TabView(selection: $selectedTab){
                     TakerTicket()
+                        .tag(1)
                     TakerTicket()
+                        .tag(2)
                     TakerTicket()
+                        .tag(3)
                     TakerTicket()
+                        .tag(4)
                     TakerTicket()
+                        .tag(5)
                 }
-                .padding(.bottom, 20)
-                .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height * 0.45)
                 .tabViewStyle(.page(indexDisplayMode: .never))
+                    Button(action: {
+                        if selectedTab != 5 {
+                            selectedTab = selectedTab + 1
+                        }
+                    }, label: {
+                        Image(systemName: "chevron.right")
+                        .foregroundColor(selectedTab != 5 ? .black : .gray)
+                    })
+      
+                    .padding(.trailing, 6)
+            }
+                .padding(.bottom, 20)
+                .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height * 0.4)
+           
                 HStack{
                     Text("Active Orders")
                     
@@ -90,50 +123,54 @@ struct HomeScreenTakerView: View {
                 }
                 .padding(.vertical)
                 .padding(.horizontal)
-                
-                VStack{
-                    HStack{
-                        Text("#214145")
-                        Spacer()
-                        Capsule()
-                            .foregroundColor(.red)
-                            .frame(width: 110, height: 35)
-                            .overlay{
-                                HStack
-                                {
-                                    Image(systemName: "alarm")
-                                    Text("In 2 Hrs")
-                                    
-                                }
-                                .foregroundColor(.white)
+                NavigationLink(destination: TakerMapView(isShowingDetail : $isShowingDetail),isActive: $isShowingDetail, label: {
+                    VStack{
+                        HStack{
+                            Text("#214145")
+                            Spacer()
+                            Capsule()
+                                .foregroundColor(.red)
+                                .frame(width: 110, height: 35)
+                                .overlay{
+                                    HStack
+                                    {
+                                        Image(systemName: "alarm")
+                                        Text("In 2 Hrs")
+                                        
+                                    }
+                                    .foregroundColor(.white)
 
-                            }
-                    }
-                    .padding(.horizontal)
-                    HStack{
-                        Text("Rice")
-                            .font(.body)
-                            .foregroundColor(.gray)
-                       Text("Dry")
-                            .padding(.horizontal, 5)
-                            .padding(.vertical, 3)
-                            .foregroundColor(.gray)
-                            .overlay{
-                                RoundedRectangle(cornerRadius: 15)
-                                    .stroke(Color.gray, lineWidth: 1)
-                                   
-                            }
-                        Spacer()
-                                HStack
-                                {
-                                    Image(systemName: "person.circle")
-                                    Text("Bhuvan Kumar")
-                                    
                                 }
-                            
+                        }
+                        .padding(.horizontal)
+                        HStack{
+                            Text("Rice")
+                                .font(.body)
+                                .foregroundColor(.gray)
+                           Text("Dry")
+                                .padding(.horizontal, 5)
+                                .padding(.vertical, 3)
+                                .foregroundColor(.gray)
+                                .overlay{
+                                    RoundedRectangle(cornerRadius: 15)
+                                        .stroke(Color.gray, lineWidth: 1)
+                                       
+                                }
+                            Spacer()
+                                    HStack
+                                    {
+                                        Image(systemName: "person.circle")
+                                        Text("Bhuvan Kumar")
+                                        
+                                    }
+                                 
+                                
+                        }
+                        .padding(.horizontal)
                     }
-                    .padding(.horizontal)
-                }
+                })
+                .foregroundColor(.primary)
+               
                 Divider()
                     .padding(.horizontal)
                 VStack{
