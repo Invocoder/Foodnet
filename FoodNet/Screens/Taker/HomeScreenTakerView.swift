@@ -9,6 +9,7 @@ import SwiftUI
 
 struct HomeScreenTakerView: View {
     var body: some View {
+      
         ZStack{
             Image("bg")
             ScrollView{
@@ -77,7 +78,7 @@ struct HomeScreenTakerView: View {
                     TakerTicket()
                 }
                 .padding(.bottom, 20)
-                .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height * 0.4)
+                .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height * 0.45)
                 .tabViewStyle(.page(indexDisplayMode: .never))
                 HStack{
                     Text("Active Orders")
@@ -213,6 +214,7 @@ struct HomeScreenTakerView: View {
                                         .stroke(Color.gray, lineWidth: 1)
                                        
                                 }
+                            Spacer()
                                 HStack
                                 {
                                     Image(systemName: "person.circle")
@@ -229,6 +231,7 @@ struct HomeScreenTakerView: View {
             }
        
         }
+
     }
 }
 

@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct MapView: View {
+    @State var showSheet : Bool = false
+    @Binding var isShowingDetail : Bool
     var body: some View {
         ZStack{
             Image("map")
@@ -41,10 +43,15 @@ struct MapView: View {
                         .padding(.horizontal, 5)
                         .foregroundColor(.white)
                         Spacer()
-                        Image("call")
-                            .resizable()
-                            .frame(width: 45, height: 45)
-                            .padding(.trailing, 80)
+                        Button(action: {
+                            showSheet = true
+                        }, label: {
+                            Image("call")
+                                .resizable()
+                                .frame(width: 45, height: 45)
+                                .padding(.trailing, 80)
+                        })
+                    
                         
             }
            
@@ -52,12 +59,21 @@ struct MapView: View {
         }
         
         }
+        .sheet(isPresented: $showSheet, content: {
+            SuccessPageView()
+        })
+        .onChange(of: showSheet, perform: { _ in
+            if showSheet == false {
+               isShowingDetail = false
+            }
+        })
+        .navigationBarBackButtonHidden(true)
         .ignoresSafeArea()
     }
 }
 
 struct MapView_Previews: PreviewProvider {
     static var previews: some View {
-        MapView()
+        MapView( isShowingDetail: .constant(false))
     }
 }

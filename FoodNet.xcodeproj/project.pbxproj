@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		6F5F526E2A22CDC7006D2631 /* TakerHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F5F526D2A22CDC7006D2631 /* TakerHistoryView.swift */; };
+		6F5F52702A22CF76006D2631 /* OnboardingTabsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F5F526F2A22CF76006D2631 /* OnboardingTabsView.swift */; };
+		6F5F52722A22D3F9006D2631 /* AuthScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F5F52712A22D3F9006D2631 /* AuthScreen.swift */; };
 		6F6366D92A2222BB0005874D /* FoodNetApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F6366D82A2222BB0005874D /* FoodNetApp.swift */; };
 		6F6366DB2A2222BB0005874D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F6366DA2A2222BB0005874D /* ContentView.swift */; };
 		6F6366DD2A2222BC0005874D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F6366DC2A2222BC0005874D /* Assets.xcassets */; };
@@ -35,6 +37,8 @@
 
 /* Begin PBXFileReference section */
 		6F5F526D2A22CDC7006D2631 /* TakerHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakerHistoryView.swift; sourceTree = "<group>"; };
+		6F5F526F2A22CF76006D2631 /* OnboardingTabsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingTabsView.swift; sourceTree = "<group>"; };
+		6F5F52712A22D3F9006D2631 /* AuthScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthScreen.swift; sourceTree = "<group>"; };
 		6F6366D52A2222BB0005874D /* FoodNet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodNet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F6366D82A2222BB0005874D /* FoodNetApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodNetApp.swift; sourceTree = "<group>"; };
 		6F6366DA2A2222BB0005874D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -93,6 +97,8 @@
 			children = (
 				6F6366D82A2222BB0005874D /* FoodNetApp.swift */,
 				6F6366DA2A2222BB0005874D /* ContentView.swift */,
+				6F5F526F2A22CF76006D2631 /* OnboardingTabsView.swift */,
+				6F5F52712A22D3F9006D2631 /* AuthScreen.swift */,
 				6F6366E62A2222F70005874D /* Screens */,
 				6F6366EC2A2226B80005874D /* Helper Views.swift */,
 				6F6366DC2A2222BC0005874D /* Assets.xcassets */,
@@ -240,7 +246,9 @@
 				6F6366E92A22248D0005874D /* CreateAccountView.swift in Sources */,
 				6F6366EB2A22249B0005874D /* VerifyOTPView.swift in Sources */,
 				6F6366FA2A22697E0005874D /* ProgressDetailView.swift in Sources */,
+				6F5F52702A22CF76006D2631 /* OnboardingTabsView.swift in Sources */,
 				6F6366DB2A2222BB0005874D /* ContentView.swift in Sources */,
+				6F5F52722A22D3F9006D2631 /* AuthScreen.swift in Sources */,
 				6F6367062A2298490005874D /* TicketTabView.swift in Sources */,
 				6F6366FC2A226F7A0005874D /* MapView.swift in Sources */,
 				6F6366EF2A223C670005874D /* OnboardingView.swift in Sources */,

@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct CreateAccountView: View {
+    @Binding var giver : Int
+    @Binding var login : Bool
+    @Binding var selectedTab : Int
     @State var name : String = ""
     var body: some View {
         ZStack{
@@ -64,24 +67,26 @@ struct CreateAccountView: View {
                             RoundedRectangle(cornerRadius: 10)
                                 .stroke(Color.black, lineWidth: 1)
                         )
-                    VStack{
-                        Text("NGO Unique ID")
-                            .padding(.top,20)
-                            .frame(width: UIScreen.main.bounds.width * 0.9, alignment: .leading)
-                        TextField("", text: $name)
-                            .padding()
-                            .frame(height: 45)
-                            .frame(width: UIScreen.main.bounds.width * 0.9, alignment: .leading)
-                            .overlay(
-                                RoundedRectangle(cornerRadius: 10)
-                                    .stroke(Color.black, lineWidth: 1)
-                            )
-                        HStack{
-                            Spacer()
-                            Text("Verify Now")
-                                .padding(.horizontal)
-                                .foregroundColor(.green)
-                                .underline()
+                    if giver == 2 {
+                        VStack{
+                            Text("NGO Unique ID")
+                                .padding(.top,20)
+                                .frame(width: UIScreen.main.bounds.width * 0.9, alignment: .leading)
+                            TextField("", text: $name)
+                                .padding()
+                                .frame(height: 45)
+                                .frame(width: UIScreen.main.bounds.width * 0.9, alignment: .leading)
+                                .overlay(
+                                    RoundedRectangle(cornerRadius: 10)
+                                        .stroke(Color.black, lineWidth: 1)
+                                )
+                            HStack{
+                                Spacer()
+                                Text("Verify Now")
+                                    .padding(.horizontal)
+                                    .foregroundColor(.green)
+                                    .underline()
+                            }
                         }
                     }
                     
@@ -96,9 +101,11 @@ struct CreateAccountView: View {
                                 .stroke(Color.black, lineWidth: 1)
                         )
                 }
+               Button(action: {selectedTab = 2}, label: {
+                   ButtonView(buttonName: "Join The Revolution!", buttonColor: .green, textColor: .white, height: 50, horizontalPadding: 20)
+                       .padding(.top, 30)
+               })
                
-                ButtonView(buttonName: "Join The Revolution!", buttonColor: .green, textColor: .white, height: 50, horizontalPadding: 20)
-                    .padding(.top, 30)
             }
             
         
@@ -113,6 +120,6 @@ struct CreateAccountView: View {
 
 struct CreateAccountView_Previews: PreviewProvider {
     static var previews: some View {
-        CreateAccountView()
+        CreateAccountView(giver:  .constant(1), login: .constant(false), selectedTab: .constant(1))
     }
 }

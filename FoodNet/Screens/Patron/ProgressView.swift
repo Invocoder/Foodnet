@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ProgressView: View {
+    @Binding var isShowingDetail : Bool
     var body: some View {
         ZStack{
                 Image("bg")
@@ -35,7 +36,7 @@ struct ProgressView: View {
                         RoundedRectangle(cornerRadius: 20)
                             .frame(height: UIScreen.main.bounds.height * 0.45)
                             .foregroundColor(Color(.systemGray6))
-                        ProgressDetailView()
+                        ProgressDetailView(isShowingDetail: $isShowingDetail)
                             .padding(.bottom,75)
                     }
                 }
@@ -64,19 +65,21 @@ struct ProgressView: View {
                                     .frame(width: 45, height: 45)
                                 
                     }
-                            .padding(.horizontal)
+                            .padding(.horizontal, 20)
+                          
                    
                     }
                 }
                 
             }
         }
+        .navigationBarBackButtonHidden(true)
         .ignoresSafeArea()
     }
 }
 
 struct ProgressView_Previews: PreviewProvider {
     static var previews: some View {
-        ProgressView()
+        ProgressView( isShowingDetail: .constant(false))
     }
 }

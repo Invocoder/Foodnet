@@ -17,6 +17,8 @@ struct VerifyOTPView: View {
     var textFieldOriginalWidth: CGFloat {
         (textBoxWidth*6)+(spaceBetweenBoxes*3)+((paddingOfBox*2)*3)
     }
+    @Binding var giver: Int
+    @Binding var login: Bool
     var body: some View {
         ZStack{
         ScrollView{
@@ -78,8 +80,10 @@ struct VerifyOTPView: View {
                     .padding()
                    
                 }
-               
-                ButtonView(buttonName: "Verify", buttonColor: .green, textColor: .white, height: 50, horizontalPadding: 20)
+               Button(action: {login = false}, label: {
+                   ButtonView(buttonName: "Verify", buttonColor: .green, textColor: .white, height: 50, horizontalPadding: 20)
+               })
+         
                     .padding(.top, 30)
                   
             }
@@ -115,6 +119,6 @@ struct VerifyOTPView: View {
 
 struct VerifyOTPView_Previews: PreviewProvider {
     static var previews: some View {
-        VerifyOTPView()
+        VerifyOTPView(giver:  .constant(1), login: .constant(false))
     }
 }

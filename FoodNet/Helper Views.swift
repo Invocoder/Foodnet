@@ -266,6 +266,29 @@ extension ToggleStyle where Self == CheckboxToggleStyle {
     static var checkmark: CheckboxToggleStyle { CheckboxToggleStyle() }
 }
 
+struct BackButtonView: View {
+    var accentColor: Color = .white
+    var imgheight: CGFloat = 12
+    var imgwidth: CGFloat = 6
+    var foregroundColor: Color = .white
+    var imgName: String = "lessthan"
+    var body: some View {
+        ZStack {
+            RoundedRectangle(cornerRadius: 12, style: .continuous)
+                .foregroundColor(foregroundColor)
+                .frame(width: 50, height: 48)
+                .opacity(0.2)
 
+            Image(systemName: imgName)
+                .resizable()
+                .accentColor(accentColor)
+                .frame(width: imgwidth, height: imgheight)
+
+        }
+        .overlay(
+            RoundedRectangle(cornerRadius: 12)
+                .stroke(Color.green, lineWidth: 0.5)               )
+    }
+}
 
 

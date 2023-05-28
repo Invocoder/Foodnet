@@ -12,6 +12,7 @@ struct PatronHomeScreen: View {
     @StateObject var viewModel = ChipsViewModel()
     @State private var isChecked = false
     @State private var currentDate = Date()
+    @Binding var isShowingDetail : Bool
     var units = ["kg", "L"]
     @State private var selectedUnit = "Red"
     var body: some View {
@@ -111,19 +112,19 @@ struct PatronHomeScreen: View {
                         }
                     }
                 }
+                NavigationLink(destination: ProgressView(isShowingDetail : $isShowingDetail) , label:  {ButtonView(buttonName: "Submit", buttonColor: .green, textColor: .white, height: 50, horizontalPadding: 20)})
+                .padding(.top, 10)
                
-                ButtonView(buttonName: "Join The Revolution!", buttonColor: .green, textColor: .white, height: 50, horizontalPadding: 20)
-                    .padding(.top, 10)
             }
             
         }
+        .navigationBarBackButtonHidden(true)
           
     }
-        .edgesIgnoringSafeArea(.bottom)
     }}
 
 struct PatronHomeScreen_Previews: PreviewProvider {
     static var previews: some View {
-        PatronHomeScreen()
+        PatronHomeScreen( isShowingDetail: .constant(false))
     }
 }

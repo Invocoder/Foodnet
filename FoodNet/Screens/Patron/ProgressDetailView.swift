@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ProgressDetailView: View {
     var imgName : String = "checkmark.circle"
+    @Binding var isShowingDetail : Bool
     var body: some View {
         VStack{
            
@@ -60,14 +61,17 @@ struct ProgressDetailView: View {
                         .font(.body)
                         .padding(.horizontal)
                     Spacer()
-                    HStack{
-                        Image("location")
-                            .resizable()
-                            .frame(width: 15, height: 20)
-                        Text("Track")
-                            .foregroundColor(.green)
-                            .padding(.trailing)
-                    }
+                    NavigationLink(destination: MapView(isShowingDetail : $isShowingDetail), label: {
+                        HStack{
+                            Image("location")
+                                .resizable()
+                                .frame(width: 15, height: 20)
+                            Text("Track")
+                                .foregroundColor(.green)
+                                .padding(.trailing)
+                        }
+
+                    })
                 }
                 .padding(.leading, 25)
                 HStack{
@@ -97,6 +101,6 @@ struct ProgressDetailView: View {
 
 struct ProgressDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        ProgressDetailView()
+        ProgressDetailView( isShowingDetail: .constant(false))
     }
 }

@@ -13,12 +13,12 @@ struct TicketDetailView: View {
             VStack(spacing: 0){
                 RoundedRectangle(cornerRadius: 24)
                     .stroke(Color.gray, lineWidth: 1)
-                    .frame(width: UIScreen.main.bounds.width - 50, height: 280)
+                    .frame(width: UIScreen.main.bounds.width - 60, height: 280)
                     .overlay(
                         VStack{
                             Rectangle()
                                 .cornerRadius(24, corners: [.topLeft, .topRight])
-                                .frame(width: UIScreen.main.bounds.width - 50, height: 100)
+                                .frame(width: UIScreen.main.bounds.width - 60, height: 100)
                             Spacer()
                         }
                         )

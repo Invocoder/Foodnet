@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct EarthView: View {
+    @State var isShowingDetail = false
     var body: some View {
         ZStack{
             Image("bg")
@@ -75,15 +76,22 @@ struct EarthView: View {
                 HStack{
                     Text("Past Orders")
                     Spacer()
-                    Text("View All")
-                        .foregroundColor(.green)
-                        .underline()
+                    NavigationLink(destination: {
+                        PastOrdersView()
+                    }, label: {
+                        Text("View All")
+                            .foregroundColor(.green)
+                            .underline()
+                    })
+              
                 }
                 .padding()
              TicketTabView()
                     .padding(.bottom, 20)
                     .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height * 0.365)
-                ButtonView(buttonName: "Create Donation", buttonColor: .green, textColor: .white, height: 42, horizontalPadding: 14)
+                NavigationLink(destination: PatronHomeScreen(isShowingDetail : $isShowingDetail),isActive: $isShowingDetail,label : {
+                    ButtonView(buttonName: "Create Donation", buttonColor: .green, textColor: .white, height: 42, horizontalPadding: 14)
+                })
             }
         }
     }
