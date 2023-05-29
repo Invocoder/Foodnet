@@ -1,4 +1,12 @@
 # Foodnet
+
+
+
+
+
+https://github.com/Invocoder/Foodnet/assets/51221607/122a00a5-7641-43b6-b18f-8cc1eedc70b1
+
+
 "Food for Good" is an innovative initiative aimed at bridging the gap between food waste and hunger in India. Our project connects restaurants and event organizers with NGOs and organizations dedicated to feeding the underprivileged. By leveraging technology, we create a seamless platform for donating excess food, ensuring that no meal goes to waste.
 
 With our user-friendly app and website, restaurants and event organizers can easily post information about surplus food, including its type, quantity, and location. Our platform then notifies nearby NGOs, allowing them to quickly respond and collect the donated food. This not only reduces food waste but also provides nutritious meals to those in need.
